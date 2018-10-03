@@ -1,0 +1,16 @@
+version: '2'
+services:
+  mysql_master:
+    image: mysql:5.7.21
+    container_name: mysql_master
+    volumes:
+      - mysql_master:/var/lib/mysql
+      - ./mysql_master.cnf:/etc/mysql/my.cnf
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlpw123
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_master:
