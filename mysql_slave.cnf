@@ -28,9 +28,6 @@ init_connect = 'SET NAMES utf8'
 #忽略SQL语句大小写
 lower_case_table_names = 1
 
-#避免MySQL的外部锁定，减少出错几率增强稳定性。
-skip-locking
-
 #CREATE TABLE 语句的默认表类型(CSV,MRG_MYISAM,MEMORY,MyISAM,InnoDB)
 default-storage-engine = InnoDB
 
