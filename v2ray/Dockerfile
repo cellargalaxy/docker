@@ -13,7 +13,7 @@ FROM alpine
 
 LABEL maintainer "V2Fly Community <admin@v2fly.org>"
 COPY --from=builder /tmp/v2ray.tgz /tmp
-ADD ./config.jso /etc/v2ray/config.json
+ADD ./config.json /etc/v2ray/config.json
 RUN apk update && apk add ca-certificates && \
     mkdir -p /usr/bin/v2ray && \
     tar xvfz /tmp/v2ray.tgz -C /usr/bin/v2ray
